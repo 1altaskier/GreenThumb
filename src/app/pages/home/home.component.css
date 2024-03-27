@@ -14,26 +14,128 @@ body {
 
 .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../assets/images/main.jpg");
-  
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../../assets/images/main.jpg);
     /* Set a specific height */
-    height: 50%;
+    height: 500px;
   
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
     background-size: cover;
-    position: relative;
-  }
-  
-  /* Place text in the middle of the image */
-  .hero-text {
+    /*position: relative;*/
+}
+
+/* Place text in the middle of the image */
+.hero-text {
     text-align: center;
+    font-size: larger;
     position: absolute;
-    top: 50%;
+    top: 410px;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: #eef5ac;
+  }
+
+  .planning-image {
+    /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../../assets/images/planning.jpg);
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+    /*position: relative;*/
+}
+
+/* Place text in the middle of the image */
+.planning-text {
+    text-align: center;
+    font-size: x-large;
+    position: absolute;
+    top: 600px;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: #eef5ac;
+  }
+
+  .planting-image {
+    /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../../assets/images/planting.jpeg);
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+    /*position: relative;*/
+}
+
+/* Place text in the middle of the image */
+.planting-text {
+    text-align: center;
+    font-size: x-large;
+    position: absolute;
+    top: 600px;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    color: #eef5ac;
+  }
+
+  .care-image {
+    /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../../assets/images/care_small.jpg);
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+    /*position: relative;*/
+}
+
+/* Place text in the middle of the image */
+.care-text {
+    text-align: center;
+    font-size: x-large;
+    position: absolute;
+    top: 1200px;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: #eef5ac;
+  }
+
+  .harvest-image {
+    /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../../assets/images/harvest.jpg);
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+    /*position: relative;*/
+}
+
+/* Place text in the middle of the image */
+.harvest-text {
+    text-align: center;
+    font-size: x-large;
+    position: absolute;
+    top: 1200px;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    color: #eef5ac;
+  }
+
+  .content{
+    position: relative;
+    color: #000;
+    text-align: center;
   }
 
 .fill {
@@ -50,10 +152,9 @@ body {
 
 .container {
     max-width: 100%;
-    margin: 30px auto;
+    margin: 0px auto;
     overflow: auto;
     min-height: 300px;
-    border: 1p solid steelblue;
     border-radius: 5px;
 }
 

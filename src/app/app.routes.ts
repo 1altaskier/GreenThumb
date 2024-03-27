@@ -1,26 +1,17 @@
 import { Routes } from '@angular/router';
 
-import { BlogComponent } from './pages/blog/blog.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-import { BlogsComponent } from './pages/blogs/blogs.component';
 import { CareMaintComponent } from './pages/care-maint/care-maint.component';
 import { HarvestingComponent } from './pages/harvesting/harvesting.component';
 import { PlanningComponent } from './pages/planning/planning.component';
 import { PlantingComponent } from './pages/planting/planting.component';
+import { DataService  } from './data/data.service';
 
 export const routes: Routes = [
     {
         path: 'home',
         component: HomeComponent
-    },
-    {
-        path: 'blogs',
-        component: BlogsComponent
-    },
-    {
-        path: 'blog',
-        component: BlogComponent
     },
     {
         path: 'profile',
@@ -41,5 +32,9 @@ export const routes: Routes = [
     {
         path: 'planting',
         component: PlantingComponent
+    },
+    {
+        path: 'data-service',
+        component: DataService
     }
 ];

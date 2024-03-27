@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
-import { BlogsComponent } from "../../pages/blogs/blogs.component";
-import { BlogComponent } from "../../pages/blog/blog.component";
 import { ProfileComponent } from "../../pages/profile/profile.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    BlogsComponent,
-    BlogComponent,
-    ProfileComponent
+    ProfileComponent,
+    RouterLink,
+    RouterLinkActive,
+    RouterOutlet
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

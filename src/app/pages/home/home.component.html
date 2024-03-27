@@ -1,1 +1,61 @@
-<p>Home works!</p>
+<div class="container-fullsize">
+
+    <div class="row">
+        <div class='hero-image'></div>
+        <div class="col-md-6 p-4 hero-text">
+            Whether you're a seasoned green thumb or just dipping your toes into the fertile soil of gardening,
+            our blogs are your companion in cultivating a deeper connection with the earth. From practical tips
+            on plant care to musings on the profound lessons found in a garden's embrace, we aim to inspire and
+            empower you to nurture not only your plants but also your own well-being.
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-white text-center p-3">
+                        <a class="nav-link" routerLink="/planning" routerLinkActive="activebutton"
+                            ariaCurrentWhenActive="page">
+                            <div class='planning-image'></div>
+                            <div class="col-md-6 p-4 planning-text">Planning Your Garden</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-white text-center p-3">
+                        <a class="nav-link" routerLink="/planting" routerLinkActive="activebutton"
+                            ariaCurrentWhenActive="page">
+                            <div class='planting-image'></div>
+                            <div class="col-md-6 p-4 planting-text">Planting Your Garden</div>>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-white text-center p-3">
+                        <a class="nav-link" routerLink="/care-maint" routerLinkActive="activebutton"
+                            ariaCurrentWhenActive="page">
+                            <div class='care-image'></div>
+                            <div class="col-md-6 p-4 care-text">Care & Maintenance of Your Garden</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-white text-center p-3">
+                        <a class="nav-link" routerLink="/harvesting" routerLinkActive="activebutton"
+                            ariaCurrentWhenActive="page">
+                            <div class='harvest-image'></div>
+                            <div class="col-md-6 p-4 harvest-text">Harvesting the Goods!</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <router-outlet></router-outlet>
+</div>

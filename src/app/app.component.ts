@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -12,6 +14,7 @@ import { WishItem } from '../shared/models/wishItem';
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
     imports: [
+      HttpClientModule,
       RouterLink, 
       RouterLinkActive, 
       RouterOutlet, 
