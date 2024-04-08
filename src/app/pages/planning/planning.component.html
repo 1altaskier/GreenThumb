@@ -1,46 +1,25 @@
 <div class="container">
     <div class="main-content text-center p-5">
-        <div class="row text-center">
-            <h3>Planning Your Garden</h3>
+        
+        <div class="row text-center m-4">
+            <h3><em>Planning Your Garden</em></h3>
         </div>
 
         <div class="row">
-            <label for="title">Blog Title:</label>
-            <input name="title" type="text" class="form-control" [(ngModel)]="title">
+            <div class="col-md-5 m-2">
+                <button type="button" id="startNewBlog" class="btn btn-success btn-lg" (click)="startBlog = !startBlog">Start New Blog</button>
+            </div>
+            
         </div>
 
-        <div class="row">
-            <label for="text">Blog Text:</label>
-            <textarea name="text" class="form-control" [(ngModel)]="contents"></textarea>
+        <div class="row" *ngIf="startBlog">
+            <app-add-planning-blog></app-add-planning-blog>
         </div>
 
-        <div class="row m-2">
-            This is what you post will look like. Is this what you wanted to say?
+        <div class="row blog-content">
+            <app-display-planning-blog></app-display-planning-blog>
         </div>
 
-        <div class="row p-4">
-            Title: <i>{{title}}</i>
-        </div>
-        <div class="row p-4">
-            Text: <i>{{contents}}</i>
-        </div>
-
-        <div class="row p-4">
-            Model Contents: <i>{{showModel}}</i>
-        </div>
-
-
-
-
-        <div class="row p-4">
-            <button type="button" class="btn btn-success" (click)='showModel.createOn'>Submit</button>
-            <i class="fa-solid fa-camera"></i>
-        </div>
-
-    </div>
-
-    <div class="row">
-        <app-post></app-post>
     </div>
 
     <div class="side-content p-4 m-2 line intro-color">

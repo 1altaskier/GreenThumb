@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    color: #000;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+}
+
+.blog-content{
+    font-size: larger;
+}

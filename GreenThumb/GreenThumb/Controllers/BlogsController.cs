@@ -84,16 +84,28 @@ namespace GreenThumb.Controllers
     // POST: api/Users
     // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
     [HttpPost]
-    public async Task<ActionResult<Blogs>> PostBlog(Blogs blog)
+    public async Task<ActionResult<Blogs>> PostBlog([FromBody]Blogs blog)
     {
-      if (_context.Blogs == null)
+      try
       {
-        return Problem("Entity set 'GreenThumbContext.Blogs'  is null.");
-      }
-      _context.Blogs.Add(blog);
-      await _context.SaveChangesAsync();
+        if (_context.Blogs == null)
+        {
+          return Problem("Entity set 'GreenThumbContext.Blogs'  is null.");
+        }
 
-      return CreatedAtAction("GetUsers", new { id = blog.Id }, blog);
+        blog.CreatedOn = DateTime.Now;
+        blog.ModifiedOn = DateTime.Now;
+
+        _context.Blogs.Add(blog);
+        await _context.SaveChangesAsync();
+
+        return CreatedAtAction("GetUsers", new { id = blog.Id }, blog);
+      }
+      catch (Exception ex)
+      {
+        return BadRequest(ex.Message);
+      }
+
     }
 
     // DELETE: api/Users/5

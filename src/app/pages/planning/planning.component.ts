@@ -1,51 +1,27 @@
 import { Component } from '@angular/core'
+import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms';
 import { PostComponent } from "../../services/post/post.component";
+import { Blog } from "../../../shared/models/blog";
+import { DisplayPlanningBlogComponent } from "./display-blog/display-planning-blog/display-planning-blog.component";
+import { AddPlanningBlogComponent } from "./add-blog/add-planning-blog/add-planning-blog.component";
+import { AddPostComponent } from "../../services/add-post/add-post/add-post.component";
 
 @Component({
-  selector: 'app-planning',
-  standalone: true,
-  templateUrl: './planning.component.html',
-  styleUrl: './planning.component.css',
-  imports: [
-    FormsModule,
-    PostComponent
-  ]
+    selector: 'app-planning',
+    standalone: true,
+    templateUrl: './planning.component.html',
+    styleUrl: './planning.component.css',
+    imports: [
+        FormsModule,
+        PostComponent,
+        DisplayPlanningBlogComponent,
+        AddPlanningBlogComponent,
+        AddPostComponent,
+        CommonModule
+    ]
 })
 export class PlanningComponent {
-  title!: string;
-  contents!: string;
-  model: any;
-
-  showModel = createBlog();
-}
-
-function createBlog() {
-  // Date & Time Stamp
-  let ts = new Date((new Date()).getTime() + 24 * 60 * 60 * 1000);
-
-  // let blog = <Blog>{};
-  return {
-  title : '',
-  text: '',
-  userId : 1, // Britt
-  blogRating : 9,
-  blogCategoryId : 1, // Planning
-  image : '',
-  createOn : ts,
-  modifiedOn : ts,
-  createBy : 1
-  }
-}
-
-interface Blog {
-  title: string;
-  text: string;
-  userId: number;
-  blogRating: number;
-  blogCategoryId: number;
-  image: string;
-  createOn: Date;
-  modifiedOn: Date;
-  createBy: number;
+startBlog: boolean | undefined;
+    
 }

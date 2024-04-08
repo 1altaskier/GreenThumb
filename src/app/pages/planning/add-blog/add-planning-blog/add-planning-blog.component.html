@@ -1,0 +1,25 @@
+
+    <div class="main-content text-center p-5">
+
+        <div class="row">
+            <label for="title">Blog Title:</label>
+            <input name="title" type="text" class="form-control" [(ngModel)]="title">
+        </div>
+
+        <div class="row">
+            <label for="text">Blog Text:</label>
+            <textarea name="text" class="form-control" [(ngModel)]="contents"></textarea>
+        </div>
+
+        <div class="row p-4">
+            Preview:
+            <br>
+            <i>{{title}}</i>
+            <br>
+            <i>{{contents}}</i>
+        </div>
+
+        <div class="row p-4">
+            <button type="button" class="btn btn-success" (click)='PostBlog()'>Post New Blog</button>
+            <i class="fa-solid fa-camera"></i>
+        </div>
